@@ -1,0 +1,62 @@
+.sprite-dudinskiy {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-dudinskiy-divider {
+    width: 76px;
+    height: 17px;
+    background-position: -10px -10px;
+}
+
+.sprite-dudinskiy-divider1 {
+    width: 76px;
+    height: 17px;
+    background-position: -106px -10px;
+}
+
+.sprite-dudinskiy-service-01 {
+    width: 217px;
+    height: 184px;
+    background-position: -202px -10px;
+}
+
+.sprite-dudinskiy-service-02 {
+    width: 216px;
+    height: 184px;
+    background-position: -439px -10px;
+}
+
+.sprite-dudinskiy-service-03 {
+    width: 217px;
+    height: 184px;
+    background-position: -675px -10px;
+}
+
+.sprite-dudinskiy-service-04 {
+    width: 217px;
+    height: 184px;
+    background-position: -912px -10px;
+}
+
+.sprite-dudinskiy-service-05 {
+    width: 216px;
+    height: 184px;
+    background-position: -1149px -10px;
+}
+
+.sprite-dudinskiy-service-06 {
+    width: 217px;
+    height: 184px;
+    background-position: -1385px -10px;
+}
+
+<i class="sprite-dudinskiy sprite-dudinskiy-divider"></i>
+<i class="sprite-dudinskiy sprite-dudinskiy-divider1"></i>
+<i class="sprite-dudinskiy sprite-dudinskiy-service-01"></i>
+<i class="sprite-dudinskiy sprite-dudinskiy-service-02"></i>
+<i class="sprite-dudinskiy sprite-dudinskiy-service-03"></i>
+<i class="sprite-dudinskiy sprite-dudinskiy-service-04"></i>
+<i class="sprite-dudinskiy sprite-dudinskiy-service-05"></i>
+<i class="sprite-dudinskiy sprite-dudinskiy-service-06"></i>
