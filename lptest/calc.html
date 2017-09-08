@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="main-calc.css">
+
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <script type="text/javascript" src="http://media.lpgenerator.ru/uploads/images/jquery-1.6.2.min.js"></script>
+  <script type="text/javascript" src="http://media.lpgenerator.ru/uploads/images/jquery-ui-1.8.16.custom.min.js"></script>
+  <link rel="stylesheet" href="http://media.lpgenerator.ru/uploads/images/query-ui-1.8.16.custom.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <div id="calculator">
+
+      <div> 
+          <h1>Сравните ваши расходы</h1>
+          <div class="message__left">
+            <p>Я паркуюсь <span id="amount__left"> </span> раза в месяц</p>
+          </div>
+          <div class="message__right">
+            <p>Стоимость моего времени <span id="amount__right"> </span> <span id="bold-num">руб./час</span></p>
+          </div>
+
+          <div class="slider-wrapper__left">
+            <div id="amount_slider"></div>
+          </div>
+
+          <div class="slider-wrapper__right">
+            <div id="amount-slider__right"></div>
+          </div>
+
+          <div class="button"><a href="#">Узнать о преимуществах компании</a></div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+$(function () {
+    // Left
+    $("#amount_slider").slider({ 
+        orientation: "horizontal",
+        range: false,
+        min: 8,
+        max: 44,
+        value: 22,
+        step: 1,
+        slide: function (event, ui) {
+            $("#amount__left").text(ui.value);
+            calculate();
+        }
+    });
+    $("#amount__left").text($("#amount_slider").slider("value")); 
+
+ 
+    // Right
+    $("#amount-slider__right").slider({ 
+        orientation: "horizontal",
+        range: false,
+        min: 250,
+        max: 1500,
+        value: 900,
+        step: 25,
+        slide: function (event, ui) {
+            $("#amount__right").text(ui.value);
+            calculate();
+        }
+    });
+    $("#amount__right").text($("#amount-slider__right").slider("value")); 
+
+    function calculate() {
+      var amount = $("#amount_slider, #amount-slider__right").slider("value");
+    }
+    calculate();
+
+});
+</script>
+</body>
+</html>
