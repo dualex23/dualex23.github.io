@@ -1,0 +1,69 @@
+$(function() {
+
+	$( "#btn-left" ).click(function() {
+	  $( "#aside__left" )
+	  	.animate(
+        {
+            left: '-450px'
+        }, 1100, function() {
+        	$('#aside__left').toggleClass('visible');
+        })
+      .animate(
+        {
+            left: '0'
+        }, 500);
+
+      $(this).toggleClass('active');
+	});
+
+	$( "#btn-right" ).click(function() {
+	  $( "#aside__right" )
+	  	.animate(
+        {
+            right: '-450px'
+        }, 1100, function() {$(this).toggleClass('visible');})
+      .animate(
+        {
+            right: '0'
+        }, 500);
+
+      $(this).toggleClass('active');
+	});
+
+});
+
+
+	$( "#btn-left.active" ).click(function() {
+	  $( "#aside__left" )
+	  	.animate(
+        {
+            left: '-450px'
+        }, 1100, function() {
+        	$("#btn-left.active").toggleClass('active');
+        	$('#aside__left').toggleClass('visible');
+        })
+      .animate(
+        {
+            left: '0'
+        }, 500);
+
+      
+	});
+
+	$( "#btn-right.active" ).click(function() {
+	  $( "#aside__right" )
+	  	.animate(
+        {
+            right: '-450px'
+        }, 1100, function() {$(this).toggleClass('visible');} )
+      .animate(
+        {
+            right: '0'
+        }, 500);
+
+      $(this).toggleClass('active');
+	});
+
+
+
+	
