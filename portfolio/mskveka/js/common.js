@@ -57,61 +57,52 @@ $(function() {
 
 	};
 
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+  $("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
-});
+  // accordion
+  var acc = document.getElementsByClassName("accordion");
+  var i;
 
-// accordion
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-    }
-}
-
-// Carousel
-$(document).ready(function() {
+  for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function(){
+          this.classList.toggle("active");
+          this.nextElementSibling.classList.toggle("show");
+      }
+  }
+  
+  // Carousel
  
   $("#owl-demo").owlCarousel({
  
-      navigation: true, // Show next and prev buttons
-      navigationText : ["<",">"],
-      pagination: false,
-      slideSpeed: 300,
-      paginationSpeed: 400,
-      singleItem:true
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
- 
-  });
- 
-});
+    navigation: true, // Show next and prev buttons
+    navigationText : ["<",">"],
+    pagination: false,
+    slideSpeed: 300,
+    paginationSpeed: 400,
+    singleItem:true
 
-$(document).ready(function() {
- 
+    // "singleItem:true" is a shortcut for:
+    // items : 1, 
+    // itemsDesktop : false,
+    // itemsDesktopSmall : false,
+    // itemsTablet: false,
+    // itemsMobile : false
+
+  });
+
   $(".doors-vekaslide__foto #owl-demo").owlCarousel({
- 
+
       autoPlay: 3000, //Set AutoPlay to 3 seconds
- 
+
       items : 2,
       itemsDesktop : [1199,2],
       itemsDesktopSmall : [979,1]
- 
-  });
- 
-});
 
-	//Карта гугл
-  $('#map, .footer-map').gMap(
-   {
+  });
+
+
+  //Карта гугл
+  $('#map, .footer-map').gMap({
     latitude: 55.844607,
     longitude: 37.574148,
     maptype: 'ROADMAP', // 'HYBRID', 'SATELLITE', 'ROADMAP' or 'TERRAIN'
@@ -134,4 +125,9 @@ $(document).ready(function() {
       iconanchor: [12,46]
   }
       }]
+  });
+
 });
+
+
+

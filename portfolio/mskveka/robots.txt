@@ -1,12 +1,2 @@
 User-agent: *
-Disallow: /fonts
-Disallow: /js
-Disallow: /libs
-
-User-agent: Yandex
-Disallow: /fonts
-Disallow: /js
-Disallow: /libs
-
-Host: www.mskveka.ru
-Sitemap: http://mskveka.ru/sitemap.xml
+Disallow: /
