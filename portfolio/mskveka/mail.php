@@ -1,7 +1,7 @@
 <?php
 
 $frm_name  = "Сообщение с сайта mskveka.ru";
-$recepient = "info@mskveka.ru";
+$recepient = "";
 $sitename  = "Окна Veka";
 $subject   = "Новый сообщение с сайта \"$sitename\"";
 
