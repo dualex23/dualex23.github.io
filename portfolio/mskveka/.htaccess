@@ -1,0 +1,75 @@
+# BEGIN
+<IfModule mod_rewrite.c>
+RewriteEngine On
+ErrorDocument 404 /404.html
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+Options +FollowSymLinks
+RewriteEngine On RewriteCond %{HTTP_HOST} !^www\.mskveka\.ru$ [NC] RewriteRule ^(.*)$ http://www.mskveka.com/$1 [L,R=301]
+</IfModule>
+# END
+
+
+
+Redirect 301 /about/ http://mskveka.ru/about.html
+Redirect 301 /balkon/ http://mskveka.ru/balkon.html
+Redirect 301 /blog/ http://mskveka.ru/blog.html
+Redirect 301 /energosberegayushhij-steklopaket/ http://mskveka.ru/energosberegayushhij-steklopaket.html
+Redirect 301 /garantee/ http://mskveka.ru/garantee.html
+Redirect 301 /okna-profile/ http://mskveka.ru/okna-profile.html
+Redirect 301 /okna-v-dom/ http://mskveka.ru/okna-v-dom.html
+Redirect 301 /okna-v-kvartiry/ http://mskveka.ru/okna-v-kvartiry.html
+Redirect 301 /osobennosti-kottedj/ http://mskveka.ru/osobennosti-kottedj.html
+Redirect 301 /price-balkon/ http://mskveka.ru/price-balkon.html
+Redirect 301 /price-kvartira/ http://mskveka.ru/price-kvartira.html
+Redirect 301 /price-vekaslide/ http://mskveka.ru/price-vekaslide.html
+Redirect 301 /price/ http://mskveka.ru/price.html
+Redirect 301 /stoimost-ostekleniya-kottedzha/ http://mskveka.ru/stoimost-ostekleniya-kottedzha.html
+Redirect 301 /ustanovka-panoramnih-dverey/ http://mskveka.ru/ustanovka-panoramnih-dverey.html
+Redirect 301 /vizov-consultation/ http://mskveka.ru/vizov-consultation.html
+Redirect 301 /zamena-starih-okon/ http://mskveka.ru/zamena-starih-okon.html
+Redirect 301 /contacts/ http://mskveka.ru/contacts.html
+Redirect 301 /404.html/ http://mskveka.ru/404.html.html
+
+<ifModule mod_expires.c>
+
+# Add correct content-type for fonts
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-ttf .ttf
+AddType application/x-font-opentype .otf
+AddType application/x-font-woff .woff
+AddType image/svg+xml .svg
+
+# Compress compressible fonts
+AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-opentype image/svg+xml
+
+ExpiresActive On
+ExpiresDefault "access plus 5 seconds"
+
+# Cache Images
+ExpiresByType image/x-icon "access plus 2592000 seconds"
+ExpiresByType image/jpeg "access plus 2592000 seconds"
+ExpiresByType image/png "access plus 2592000 seconds"
+ExpiresByType image/gif "access plus 2592000 seconds"
+ExpiresByType image/svg+xml "access plus 2592000 seconds"
+
+# Cache Fonts
+ExpiresByType application/vnd.ms-fontobject "access plus 2592000 seconds"
+ExpiresByType application/x-font-ttf "access plus 2592000 seconds"
+ExpiresByType application/x-font-opentype "access plus 2592000 seconds"
+ExpiresByType application/x-font-woff "access plus 2592000 seconds"
+ExpiresByType image/svg+xml "access plus 2592000 seconds"
+
+# Cache other content types (Flash, CSS, JS, HTML, XML)
+ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+ExpiresByType text/css "access plus 604800 seconds"
+ExpiresByType text/javascript "access plus 2592000 seconds"
+ExpiresByType application/javascript "access plus 2592000 seconds"
+ExpiresByType application/x-javascript "access plus 2592000 seconds"
+ExpiresByType text/html "access plus 600 seconds"
+ExpiresByType application/xhtml+xml "access plus 600 seconds"
+
+</ifModule>
