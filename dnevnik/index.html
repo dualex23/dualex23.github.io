@@ -15,6 +15,7 @@
                 apiId: 6676648
             });
             function authInfo(response) {
+                console.log(response)
                 if (response.session) {
                     alert('user: ' + response.session.mid);
                 } else {
@@ -22,6 +23,10 @@
                 }
             }  
             VK.Auth.login(authInfo);
+
+            VK.Api.call('photos.getAlbums', {owner_id: my_id, need_covers: 1, count: 5}, function (data) { 
+                fetchAlbums(data.response.items)
+            });
         };
     
         setTimeout(function() {
