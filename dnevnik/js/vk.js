@@ -22,3 +22,17 @@ function getUrl(method, params) {
 //     })
 
 // }
+
+function authInfo(response) {
+    console.log(response)
+    if (response.session) {
+        alert('user: ' + response.session.mid);
+    } else {
+        alert('not auth');
+    }
+}  
+VK.Auth.login(authInfo);
+
+VK.Api.call('photos.getAlbums', {owner_id: 101782492, need_covers: 1, count: 5}, function (data) { 
+    fetchAlbums(data.response.items)
+});
