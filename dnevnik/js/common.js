@@ -64,11 +64,11 @@ $(function() {
     // ================================================
 
     // ЗАГРУЗКА альбомов по параметрам
-    // function loadAlbums() {
-    //     VK.Api.call('photos.getAlbums', {owner_id: my_id, need_covers: 1, count: 5}, function (data) { 
-    //         fetchAlbums(data.response.items)
-    //     });
-    // }
+    function loadAlbums() {
+        VK.Api.call('photos.getAlbums', {owner_id: my_id, need_covers: 1, count: 5}, function (data) { 
+            fetchAlbums(data.response.items)
+        });
+    }
 
     // выводим альбомы с обложками из API photos.getAlbums
     function fetchAlbums(albums) {
