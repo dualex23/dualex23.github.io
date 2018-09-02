@@ -33,7 +33,7 @@ window.vkAsyncInit = function() {
         apiId: 6676648
     });
 
-    VK.Auth.login(function() {
+    VK.Auth.login(function(response) {
 
         if (response.session) {
             alert('user: ' + response.session.mid);
