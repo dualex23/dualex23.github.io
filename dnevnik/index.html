@@ -14,6 +14,14 @@
             VK.init({
                 apiId: 6676648
             });
+            function authInfo(response) {
+                if (response.session) {
+                    alert('user: ' + response.session.mid);
+                } else {
+                    alert('not auth');
+                }
+            }  
+            VK.Auth.login(authInfo);
         };
     
         setTimeout(function() {
@@ -22,7 +30,7 @@
             el.src = "https://vk.com/js/api/openapi.js?159";
             el.async = true;
             document.getElementById("vk_api_transport").appendChild(el);
-            }, 0);    
+        }, 0);    
     </script>
 
     <div class="container"> 
@@ -55,16 +63,6 @@
     </div>
 
 
-    <script>
-    function authInfo(response) {
-        if (response.session) {
-            alert('user: ' + response.session.mid);
-        } else {
-            alert('not auth');
-        }
-    }  
-    VK.Auth.login(authInfo);
-    </script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="js/vk.js"></script>
     <script src="js/common.js"></script>
