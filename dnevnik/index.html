@@ -23,7 +23,17 @@
             el.async = true;
             document.getElementById("vk_api_transport").appendChild(el);
             }, 0);
-        </script>
+
+        function authInfo(response) {
+            if (response.session) {
+                alert('user: ' + response.session.mid);
+            } else {
+                alert('not auth');
+            }
+        }  
+        VK.Auth.getLoginStatus(authInfo);      
+        VK.UI.button('login_button');
+    </script>
 
     <div class="container"> 
 
