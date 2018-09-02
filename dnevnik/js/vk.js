@@ -1,14 +1,4 @@
-
-
-
-function authInfo(response) {
-    if (response.session) {
-        alert('user: ' + response.session.mid);
-    } else {
-        alert('not auth');
-    }
-}  
-VK.Auth.login(authInfo);  
+  
 
 // ОБЩЕЕ => подключение api метод+параметры
 function getUrl(method, params) {

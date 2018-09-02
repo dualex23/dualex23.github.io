@@ -55,6 +55,16 @@
     </div>
 
 
+    <script>
+    function authInfo(response) {
+        if (response.session) {
+            alert('user: ' + response.session.mid);
+        } else {
+            alert('not auth');
+        }
+    }  
+    VK.Auth.login(authInfo);
+    </script>
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="js/vk.js"></script>
     <script src="js/common.js"></script>
