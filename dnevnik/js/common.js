@@ -65,7 +65,7 @@ $(function() {
 
     // ЗАГРУЗКА альбомов по параметрам
     function loadAlbums() {
-        sendRequest('photos.getAlbums', {owner_id: my_id, need_covers: 1, count: 5}, function (data) { 
+        VK.Api.call('photos.getAlbums', {owner_id: my_id, need_covers: 1, count: 5}, function (data) { 
             fetchAlbums(data.response.items)
         });
     }

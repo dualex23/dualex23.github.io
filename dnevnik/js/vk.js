@@ -12,13 +12,13 @@ function getUrl(method, params) {
 }
 
 // ОБЩЕЕ => универсальный ajax запрос
-function sendRequest(method, params, callback) {
+// function sendRequest(method, params, callback) {
 
-    $.ajax({
-        url: getUrl(method, params),
-        method: 'GET',
-        dataType: 'JSONP',
-        success: callback
-    })
+//     $.ajax({
+//         url: getUrl(method, params),
+//         method: 'GET',
+//         dataType: 'JSONP',
+//         success: callback
+//     })
 
-}
+// }
