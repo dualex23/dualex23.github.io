@@ -43,7 +43,7 @@ window.vkAsyncInit = function() {
 
     });
     
-    VK.Api.call('photos.getAlbums', {owner_id: 101782492, need_covers: 1, count: 5}, function (data) { 
+    VK.Api.call('photos.getAlbums', {owner_id: 101782492, need_covers: 1, count: 5, v: 5.52}, function (data) { 
         console.log(data)
         // fetchAlbums(data.response.items)
     });
