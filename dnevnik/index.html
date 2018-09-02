@@ -22,17 +22,7 @@
             el.src = "https://vk.com/js/api/openapi.js?159";
             el.async = true;
             document.getElementById("vk_api_transport").appendChild(el);
-            }, 0);
-
-        function authInfo(response) {
-            if (response.session) {
-                alert('user: ' + response.session.mid);
-            } else {
-                alert('not auth');
-            }
-        }  
-        VK.Auth.login(authInfo);      
-        VK.UI.button('login_button');
+            }, 0);    
     </script>
 
     <div class="container"> 
